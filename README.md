@@ -11,4 +11,4 @@ This application allows users to view and monitor currency exchange rates.
 - As a user, I want to be able to compare the exchange rates of different currency pairs, so that I can make the best decision for my needs.
 
 ```diff
-+ **Note:** This is an example of how you can add styles to your Markdown file using GitHub Flavored Markdown.
+
