@@ -12,28 +12,27 @@ import java.util.Map;
 @SpringBootApplication
 public class DemoApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+    }
 
 
-	@RestController
-	public class NameController {
+    @RestController
+    public class NameController {
 
-		@PostMapping("/name")
-		public Map<String, String> getName(@RequestBody Map<String, String> request) {
-			String firstName = request.get("firstName").trim();
-			String lastName = request.get("lastName").trim();
-
-
-			String fullName = firstName + " " + lastName;
+        @PostMapping("/name")
+        public Map<String, String> getName(@RequestBody Map<String, String> request) {
+            String firstName = request.get("firstName");
+            String lastName = request.get("lastName");
 
 
+            String fullName = firstName + " " + lastName;
 
-			Map<String, String> response = new HashMap<>();
-			response.put("fullName", fullName);
-			return response;
-		}
-	}
+
+            Map<String, String> response = new HashMap<>();
+            response.put("fullName", fullName);
+            return response;
+        }
+    }
 }
 
